@@ -3,6 +3,8 @@ import "./App.css";
 import BarChart from "./components/BarChart";
 import { useState } from "react";
 import { UserData } from "./Data";
+import LineChart from "./components/LineChart";
+import PieChart from "./components/PieChart";
 
 function App() {
   const [userData, setUserData] = useState({
@@ -27,6 +29,12 @@ function App() {
     <div className="App">
       <div style={{ width: 700 }}>
         <BarChart chartData={userData} />
+      </div>
+      <div style={{ width: 700 }}>
+        <LineChart chartData={userData} />
+      </div>
+      <div style={{ width: 700 }}>
+        <PieChart chartData={userData} />
       </div>
     </div>
   );
